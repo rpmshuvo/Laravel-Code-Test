@@ -35,7 +35,7 @@ Route::get('/license', 'LicenseController@index')->name('license.index');
 Route::post('/license', 'LicenseController@createLicense')->name('license.createLicense');
 // Route::post('/license-store', 'LicenseController@storeLicense')->name('license.storeLicense');
 Route::post('/license-active', 'LicenseController@activeLicense')->name('license.activeLicense');
-Route::get('/license-active-form', 'LicenseController@licenseActiveForm')->name('license.licenseActiveForm');
+Route::get('/license-active-form', 'LicenseController@licenseActiveForm')->name('license.licenseActiveForm')->middleware('user');
 
 //
 Route::get('/get-user-by-ajax', 'LicenseController@getUserByAjax')->name('license.getUserByAjax');
